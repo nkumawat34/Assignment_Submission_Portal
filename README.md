@@ -54,11 +54,13 @@ Make sure you have the following installed:
     ```
     cd frontend
     ```
+    
  2.Install the required dependencies:
     ```
     npm install
     ```
+    
  3.Start the frontend server:
-    ```
-    npm start
+   ```
+   npm start
    ``` 
