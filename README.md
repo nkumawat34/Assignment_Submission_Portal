@@ -2,8 +2,7 @@
 
 ## Description
 
-A brief description of your project, its purpose, and features.
-
+The Assignment Submission Portal is a web-based platform designed to streamline the process of submitting and managing academic assignments. This user-friendly interface allows students to upload their assignments easily, while instructors can efficiently review submissions and provide feedback.
 ## Technologies Used
 
 - Node.js
@@ -21,14 +20,14 @@ These instructions will help you set up the project locally on your machine.
 
 Make sure you have the following installed:
 
-- [Node.js](https://nodejs.org/en/download/) (version X.X.X)
-- [MongoDB](https://www.mongodb.com/try/download/community) (if you're using a local MongoDB instance)
+- [Node.js](https://nodejs.org/en/download/)
+- [MongoDB](https://www.mongodb.com/try/download/community) 
 
 ### Setting Up the Backend
 
 1. Navigate to the backend directory:
 
-   ```bash
+   ```
    cd backend
    ```
 2.Install the required dependencies:
@@ -44,9 +43,10 @@ Make sure you have the following installed:
    ```
 4.Start the backend server:
 
-      ```
-      npm start
-      ```
+   ```
+   npm start
+   ```
+
  ### Setting Up the Frontend
 
  1.Navigate to the frontend directory:
@@ -56,11 +56,13 @@ Make sure you have the following installed:
     ```
     
  2.Install the required dependencies:
+ 
     ```
     npm install
     ```
     
  3.Start the frontend server:
+ 
    ```
    npm start
    ``` 
