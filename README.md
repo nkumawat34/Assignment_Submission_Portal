@@ -57,9 +57,9 @@ Make sure you have the following installed:
     
  2.Install the required dependencies:
  
-    ```
+    
     npm install
-    ```
+
     
  3.Start the frontend server:
  
