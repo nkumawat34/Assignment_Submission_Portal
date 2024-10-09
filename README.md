@@ -51,9 +51,9 @@ Make sure you have the following installed:
 
  1.Navigate to the frontend directory:
 
-    ```
+   
     cd frontend
-    ```
+   
     
  2.Install the required dependencies:
  
@@ -65,4 +65,4 @@ Make sure you have the following installed:
  
    ```
    npm start
-   ``` 
+   
