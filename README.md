@@ -30,18 +30,20 @@ Make sure you have the following installed:
 
    ```bash
    cd backend
+   ```
 2.Install the required dependencies:
 
-   ```bash
+   ```
    npm install
-
+   ```
 3.Create a .env file in the root of the backend directory and add your environment variables. Here’s an example:
 
-   ```bash
+   ```
    MONGO_URI=mongodb+srv://nkumawat34:nkumawat34@cluster0.6msxxm4.mongodb.net/backend_intern
    JWT_SECRET=12351235
-
+   ```
 4.Start the backend server:
 
       ```bash
       npm start
+      ```
