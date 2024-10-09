@@ -44,6 +44,21 @@ Make sure you have the following installed:
    ```
 4.Start the backend server:
 
-      ```bash
+      ```
       npm start
       ```
+ ### Setting Up the Frontend
+
+ 1.Navigate to the frontend directory:
+
+    ```
+    cd frontend
+    ```
+ 2.Install the required dependencies:
+    ```
+    npm install
+    ```
+ 3.Start the frontend server:
+    ```
+    npm start
+   ``` 
