@@ -11,7 +11,7 @@ export default function AdminDashboard() {
   useEffect(() => {
     const fetchAssignments = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/admins/assignments/${email}`);
+        const response = await axios.get(`https://assignment-submission-portal-2l3c.onrender.com/api/admins/assignments/${email}`);
         if (response.data.success) {
           setAssignments(response.data.assignments);
         } else {
@@ -29,7 +29,7 @@ export default function AdminDashboard() {
   const handleAccept = async (assignmentId) => {
     
     try {
-      const response = await axios.put(`http://localhost:5000/api/admins/assignments/${assignmentId}/accept`);
+      const response = await axios.put(`https://assignment-submission-portal-2l3c.onrender.com/api/admins/assignments/${assignmentId}/accept`);
       console.log(response)
       if (response.data.success) {
         // Update the assignments in the state
@@ -50,7 +50,7 @@ export default function AdminDashboard() {
   // Function to handle rejecting an assignment
   const handleReject = async (assignmentId) => {
     try {
-      const response = await axios.put(`http://localhost:5000/api/admins/assignments/${assignmentId}/reject`);
+      const response = await axios.put(`https://assignment-submission-portal-2l3c.onrender.com/api/admins/assignments/${assignmentId}/reject`);
       console.log(response)
       
         setAssignments(assignments.map(assignment =>

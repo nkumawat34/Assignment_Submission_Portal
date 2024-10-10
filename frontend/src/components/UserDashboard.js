@@ -13,7 +13,7 @@ export default function AssignmentUpload() {
     const fetchAssignments = async () => {
       try {
          
-        const response = await axios.get(`http://localhost:5000/api/users/assignments/${email}`);
+        const response = await axios.get(`https://assignment-submission-portal-2l3c.onrender.com/api/users/assignments/${email}`);
         if (response.data.success) {
           setAssignments(response.data.assignments);
         } else {
@@ -39,7 +39,7 @@ export default function AssignmentUpload() {
       return;
     }
     try {
-      const response = await axios.post("http://localhost:5000/api/users/upload", {
+      const response = await axios.post("https://assignment-submission-portal-2l3c.onrender.com/api/users/upload", {
         userId: email, // Assuming email is being used as userId; consider using user ID instead
         task: task,
         admin: admin, // Ensure admin ID is set correctly

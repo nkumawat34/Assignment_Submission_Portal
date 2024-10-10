@@ -20,7 +20,7 @@ export default function Register() {
     try {
       // Define API endpoint based on role
       const endpoint = role === 'admin' ? '/api/admins/register' : '/api/users/register';
-      const apiUrl = `http://localhost:5000${endpoint}`;
+      const apiUrl = `https://assignment-submission-portal-2l3c.onrender.com${endpoint}`;
       console.log(apiUrl);
 
       // Make POST request to register API

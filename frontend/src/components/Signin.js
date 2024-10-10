@@ -17,7 +17,7 @@ export default function Signin() {
     try {
       // Define API endpoint based on role
       const endpoint = role === 'admin' ? '/api/admins/login' : '/api/users/login';
-      const apiUrl = `http://localhost:5000${endpoint}`;
+      const apiUrl = `https://assignment-submission-portal-2l3c.onrender.com${endpoint}`;
 
       // Make POST request to login API
       const response = await axios.post(apiUrl, {
