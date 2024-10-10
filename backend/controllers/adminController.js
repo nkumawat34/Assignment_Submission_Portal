@@ -42,7 +42,7 @@ exports.getAssignments = async (req, res) => {
         const { userId } = req.params; // Extract userId from request parameters
         console.log(userId)
         // Find assignments for the user
-        const assignments = await Assignment.find({ userId: userId });
+        const assignments = await Assignment.find({admin: userId });
 
         // Check if assignments were found
         if (assignments.length === 0) {

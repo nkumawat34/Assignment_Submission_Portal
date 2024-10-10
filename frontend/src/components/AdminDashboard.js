@@ -8,10 +8,12 @@ export default function AdminDashboard() {
   const navigate=useNavigate()
   const { email } = location.state;
 
-  useEffect(() => {
+  useEffect(()=>{
     const fetchAssignments = async () => {
       try {
+         
         const response = await axios.get(`https://assignment-submission-portal-2l3c.onrender.com/api/admins/assignments/${email}`);
+      alert(response)
         if (response.data.success) {
           setAssignments(response.data.assignments);
         } else {
@@ -22,8 +24,8 @@ export default function AdminDashboard() {
         alert('Failed to fetch assignments. Please try again later.');
       }
     };
-    fetchAssignments();
-  }, [email]);
+    fetchAssignments()
+  },[email])
 
   // Function to handle accepting an assignment
   const handleAccept = async (assignmentId) => {
