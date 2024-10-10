@@ -13,7 +13,7 @@ export default function AdminDashboard() {
       try {
          
         const response = await axios.get(`https://assignment-submission-portal-2l3c.onrender.com/api/admins/assignments/${email}`);
-      alert(response)
+     
         if (response.data.success) {
           setAssignments(response.data.assignments);
         } else {
