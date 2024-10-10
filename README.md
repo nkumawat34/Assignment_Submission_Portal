@@ -45,7 +45,7 @@ Make sure you have the following installed:
 4.Start the backend server:
 
    ```
-   npm start
+   node index.js
    ```
 
  ### Setting Up the Frontend
