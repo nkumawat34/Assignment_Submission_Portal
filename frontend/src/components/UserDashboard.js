@@ -12,7 +12,7 @@ export default function AssignmentUpload() {
   useEffect(()=>{
     const fetchAssignments = async () => {
       try {
-          console.log(email)
+         
         const response = await axios.get(`http://localhost:5000/api/users/assignments/${email}`);
         if (response.data.success) {
           setAssignments(response.data.assignments);
@@ -34,7 +34,10 @@ export default function AssignmentUpload() {
       alert('Please enter a task before uploading!');
       return;
     }
-
+    if (admin.trim() === '') {
+      alert('Please enter a admin before uploading!');
+      return;
+    }
     try {
       const response = await axios.post("http://localhost:5000/api/users/upload", {
         userId: email, // Assuming email is being used as userId; consider using user ID instead

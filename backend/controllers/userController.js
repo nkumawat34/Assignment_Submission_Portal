@@ -42,21 +42,36 @@ exports.loginUser = async (req, res) => {
 
 // Upload assignment
 exports.uploadAssignment = async (req, res) => {
-    const { userId,task, admin } = req.body;
-    
-    
-    const assignment = await Assignment.create({
-        userId,
-        task,
-        admin: admin
-    });
-    
-    if (assignment) {
-        res.status(201).json({ message: 'Assignment uploaded successfully' });
-    } else {
-        res.status(400).json({ message: 'Assignment upload failed' });
+    try {
+        const { userId, task, admin } = req.body;
+
+        // Validate required fields
+        if (!userId || !task || !admin) {
+            return res.status(400).json({ message: 'Missing required fields' });
+        }
+
+        // Check if task or admin is empty
+        if (task.trim() === '' || admin.trim() === '') {
+            return res.status(400).json({ message: 'Task or admin cannot be empty' });
+        }
+
+        // Create the assignment in the database
+        const assignment = await Assignment.create({
+            userId,
+            task,
+            admin
+        });
+
+        if (assignment) {
+            res.status(201).json({ message: 'Assignment uploaded successfully' });
+        } else {
+            res.status(400).json({ message: 'Assignment upload failed' });
+        }
+    } catch (error) {
+        res.status(500).json({ message: 'Server error', error: error.message });
     }
 };
+
 
 // Fetch all admins
 exports.getAllAdmins = async (req, res) => {
