@@ -45,14 +45,11 @@ export default function AssignmentUpload() {
         admin: admin, // Ensure admin ID is set correctly
       });
 
-      if (response.data.success) {
+    
         console.log('Task uploaded successfully:', task);
         alert('Task uploaded successfully!');
-        // Optionally refetch assignments after upload
-        
-      } else {
-        alert('Failed to upload task: ' + response.data.message);
-      }
+       
+     
     } catch (error) {
       console.error('Error uploading task:', error);
       alert('An error occurred while uploading the task. Please try again.');
